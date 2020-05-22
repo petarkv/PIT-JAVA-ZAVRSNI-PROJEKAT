@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry exported="true" kind="lib" path="JAR fajlovi/jcalendar-1.4.jar"/>
+	<classpathentry exported="true" kind="lib" path="JAR fajlovi/mysql-connector-java-8.0.11.jar"/>
+	<classpathentry exported="true" kind="lib" path="JAR fajlovi/swingx-all-1.6.4.jar"/>
+	<classpathentry kind="lib" path="JAR fajlovi/commons-beanutils-1.8.3.jar"/>
+	<classpathentry kind="lib" path="JAR fajlovi/commons-collections-3.2.1-1.0.0.jar"/>
+	<classpathentry kind="lib" path="JAR fajlovi/commons-digester-2.1.jar"/>
+	<classpathentry kind="lib" path="JAR fajlovi/commons-logging-1.2.1.1.jar"/>
+	<classpathentry kind="lib" path="JAR fajlovi/groovy-all-2.1.3.jar"/>
+	<classpathentry kind="lib" path="JAR fajlovi/itext.jar"/>
+	<classpathentry kind="lib" path="JAR fajlovi/itextpdf-5.1.0.jar"/>
+	<classpathentry kind="lib" path="JAR fajlovi/jasper-compiler-jdt-5.5.23.jar"/>
+	<classpathentry kind="lib" path="JAR fajlovi/jasperreports-5.0.1.jar"/>
+	<classpathentry kind="lib" path="JAR fajlovi/jcommon.jar"/>
+	<classpathentry kind="lib" path="JAR fajlovi/jfreechart.jar"/>
+	<classpathentry exported="true" kind="con" path="net.sf.jasperreports.JR_CONTAINER"/>
+	<classpathentry exported="true" kind="con" path="com.jaspersoft.server.JRS_CONTAINER"/>
+	<classpathentry kind="lib" path="jgoodies-common-1.8.0.jar" sourcepath="jgoodies-common-1.8.0-sources.jar"/>
+	<classpathentry kind="lib" path="jgoodies-forms-1.8.0.jar" sourcepath="jgoodies-forms-1.8.0-sources.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

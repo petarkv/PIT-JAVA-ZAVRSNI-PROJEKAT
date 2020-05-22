@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.9.0.final using JasperReports Library version 6.9.0-cb8f9004be492ccc537180b49c026951f4220bf3  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="RacunOtpremnica" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="080af650-9115-45cd-bb78-ad9b1809dee5">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="RacunAdapter "/>
+	<queryString language="SQL">
+		<![CDATA[SELECT racun_otpremnica.id_racuna,racun_otpremnica.datum_racuna, kupac.valuta_placanja_kupca, kupac.naziv_firme_kupca, filijala.naziv_filijale, racun_otpremnica.ukupna_vrednost_racuna, racun_otpremnica.poreska_osnovica_racuna, racun_otpremnica.ukupan_iznos_obracunatog_pdv_a_racuna, zaposleni.ime_zaposlenog, zaposleni.prezime_zaposlenog FROM racun_otpremnica join kupac on racun_otpremnica.id_kupca = kupac.id_kupca join zaposleni on racun_otpremnica.id_zaposlenog = zaposleni.id_zaposlenog join filijala on zaposleni.id_filijale = filijala.id_filijale WHERE racun_otpremnica.id_racuna]]>
+	</queryString>
+	<field name="id_racuna" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="id_racuna"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="racun_otpremnica"/>
+	</field>
+	<field name="datum_racuna" class="java.sql.Date">
+		<property name="com.jaspersoft.studio.field.label" value="datum_racuna"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="racun_otpremnica"/>
+	</field>
+	<field name="valuta_placanja_kupca" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="valuta_placanja_kupca"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="kupac"/>
+	</field>
+	<field name="naziv_firme_kupca" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="naziv_firme_kupca"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="kupac"/>
+	</field>
+	<field name="naziv_filijale" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="naziv_filijale"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="filijala"/>
+	</field>
+	<field name="ukupna_vrednost_racuna" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.label" value="ukupna_vrednost_racuna"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="racun_otpremnica"/>
+	</field>
+	<field name="poreska_osnovica_racuna" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.label" value="poreska_osnovica_racuna"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="racun_otpremnica"/>
+	</field>
+	<field name="ukupan_iznos_obracunatog_pdv_a_racuna" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.label" value="ukupan_iznos_obracunatog_pdv_a_racuna"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="racun_otpremnica"/>
+	</field>
+	<field name="ime_zaposlenog" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="ime_zaposlenog"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="zaposleni"/>
+	</field>
+	<field name="prezime_zaposlenog" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="prezime_zaposlenog"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="zaposleni"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="87" splitType="Stretch">
+			<textField>
+				<reportElement x="70" y="50" width="100" height="30" uuid="d1c96817-6b34-4b10-a139-d985db90b7b1"/>
+				<textFieldExpression><![CDATA[$F{id_racuna}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="470" y="50" width="100" height="30" uuid="29512859-bdad-4917-802f-e160c8dbfb98"/>
+				<textFieldExpression><![CDATA[$F{datum_racuna}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="50" width="61" height="31" uuid="4cd74612-b3a2-4c63-80d3-0d0c4b132570"/>
+				<text><![CDATA[Racun broj]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="53" splitType="Stretch">
+			<textField>
+				<reportElement x="10" y="7" width="100" height="30" uuid="b97428bc-a088-4fb8-a988-8f3c254b9bd5"/>
+				<textFieldExpression><![CDATA[$F{naziv_firme_kupca}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="190" y="10" width="100" height="30" uuid="4c746d1e-2610-4ddd-8536-cff9d2378057"/>
+				<textFieldExpression><![CDATA[$F{valuta_placanja_kupca}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="11" y="0" width="100" height="30" uuid="7cc1cce6-cc19-4151-9c43-365a336a1967">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="92cf7c47-4919-4588-ae43-18b1f269031b"/>
+				</reportElement>
+				<text><![CDATA[poreska_osnovica_racuna]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="189" y="0" width="100" height="30" uuid="0fd4e043-9d7f-4bff-b9f7-2fcd6836fde2">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="95757212-1fd7-4101-9d09-0e856ad7c24b"/>
+				</reportElement>
+				<text><![CDATA[ukupan_iznos_obracunatog_pdv_a_racuna]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="412" y="0" width="100" height="30" uuid="53b0cfd5-dfd2-4be7-aec4-d21d5b18fa72">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="22cf3931-a6dc-4596-a01d-e4fbc71e5404"/>
+				</reportElement>
+				<text><![CDATA[ukupna_vrednost_racuna]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<textField>
+				<reportElement x="11" y="58" width="100" height="30" uuid="2e034cf9-9913-46ec-b680-d9945775653c">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="92cf7c47-4919-4588-ae43-18b1f269031b"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{poreska_osnovica_racuna}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="180" y="58" width="100" height="30" uuid="2b8dd1df-72d1-4902-ad38-0f5205a58a14">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="95757212-1fd7-4101-9d09-0e856ad7c24b"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{ukupan_iznos_obracunatog_pdv_a_racuna}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="410" y="60" width="100" height="30" uuid="a6b52f29-d05a-4918-af33-7b0242e5cc2d">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="22cf3931-a6dc-4596-a01d-e4fbc71e5404"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{ukupna_vrednost_racuna}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="73" splitType="Stretch">
+			<textField>
+				<reportElement x="180" y="30" width="100" height="30" uuid="c8b67ef9-e879-4d01-95cf-c9ec472f0f66"/>
+				<textFieldExpression><![CDATA[$F{ime_zaposlenog}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="280" y="30" width="130" height="30" uuid="66765e3d-3668-4df2-869d-b74113052a6e"/>
+				<textFieldExpression><![CDATA[$F{prezime_zaposlenog}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="30" width="100" height="30" uuid="3cec430c-fc5d-49b5-b0a4-40aca60b4770"/>
+				<textFieldExpression><![CDATA[$F{naziv_filijale}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="58" splitType="Stretch">
+			<textField>
+				<reportElement x="200" y="20" width="100" height="30" uuid="19aa6fb1-a178-4cf8-998a-3b1a7fba2e1b"/>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="MMMMM dd, yyyy">
+				<reportElement x="450" y="14" width="100" height="30" uuid="78db4ba4-672f-4e0b-98ab-9e5869a2d62e"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

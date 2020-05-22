@@ -1,0 +1,1 @@
+JFrame Magacin dodao sam polje Naziv magacina i dodao u klasi Magacin i u tabeli magacin
